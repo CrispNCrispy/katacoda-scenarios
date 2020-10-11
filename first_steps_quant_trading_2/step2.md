@@ -2,9 +2,7 @@ For **Simple Return**, we shall be using the `pct_change()` method from pandas. 
 
 Side Note: A series is nothing but a data structure representing a single column. A dataframe (what we have used till now) is a combination of multiple columns (or multiple Series). For example, by printing df['Close'], it outputs a single column (Series) containing the closing prices from our dataframe. Series and Dataframes contain their own respective mehods and functions and are handled differently by Python though they are related in many ways.
 
-For **Log Return**, we will be using numpy's `log()` function to compute the log values of the Adjusted Close value series. But in this case, since the `log()` function merely computes the log values and not the log return, we use the `shift()` method associated with a series in conjunction to divide the log value of the current row with the previous row. 
-
-Side Note: A method and a function are very similar, with the only difference being that a method is associated with an instance of a class object - for example, the pct_change() method we used earlier was associated with the dataframe df, hence why the method followed 'df' as in 'df.pct_change()'. Ultimately, the both take in some arguments, do some computations and return a value. We may sometimes use it interchangeably.
+For **Log Return**, we will be using numpy's `log()` function to compute the log values of the Adjusted Close value series. But in this case, since the `log()` function merely computes the log values and not the log return, we use the `shift()` method associated with a series in conjunction to divide the log value of the current row with the previous row.
 
 Let's create a new file:
 ```
@@ -37,11 +35,14 @@ print(df.head())
 
 </pre>
 
-These lines would essentially create two new columns in our dataframe, 'simple_return' and 'log_return'.
+These lines would essentially create two new columns in our dataframe, `simple_return` and `log_return`.
 
-Now run the script. Notice the two new created columns at the very end of the dataframe. Also notice the NA values in the first row. This happens because the there is no row before the first row to compute a return from.
+Now run the script. Notice the two new created columns at the very end of the dataframe. Also notice the `NA` values in the first row. This happens because the there is no row before the first row to compute a return from.
+
+Let's now exit from the python shell and run step2.py.
 
 ```
+exit()
 python step2.py
 
 ```{{execute}}
