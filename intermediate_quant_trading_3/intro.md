@@ -4,7 +4,7 @@ Quantitative trading is an extremely sophisticated area of quant finance. The pr
 
 This is the third katacoda scenario in the series: Intermediate - Quantitative Trading with Python where we'll focus on further improving our simple buy/sell strategy and then creating Short Moving Average strategy.
 
-To take the most away from this course, you should be familiar with Python that would allow you to understand Python syntax.
+To take the most away from this course, you should be familiar with Python as that would allow you to understand Python syntax.
 
 ## Disclaimer
 The content presented in this katacoda is valid for educational purposes only. By no means should the information presented here be considered investment advice. Financial markets are volatile and you should invest only at your own risk!
