@@ -3,12 +3,9 @@ With our strategy now complete, all that is left is to plot it to view a more in
 Open the same .py file we used in the last step.
 Open `step3.py`{{open}}.
 
-<pre class="file" data-filename="step2.py" data-target="append">
-fig = plt.figure()
-plt = cerebro.plot(iplot=True, volume=False)
-
-# the cerebro plot returns a 2D list, so
-fig.savefig('backtest_plot.png')
+<pre class="file" data-filename="step3.py" data-target="append">
+figure = cerebro.plot()[0][0]
+figure.savefig('backtest_plot.png')
 </pre>
 
 Run the script to view the plot.

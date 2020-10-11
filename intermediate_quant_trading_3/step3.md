@@ -1,4 +1,4 @@
-The strategy we have been using until now isn't something you would put into practice. Rather than buying when the price falls 3 bars in a row, we may connsider using a Simple Moving Average Indicator to buy a stock when the price crosses over the SMA value.
+The strategy we have been using until now isn't something you would put into practice. Rather than buying when the price falls 3 bars in a row, we may consider using a Simple Moving Average Indicator to buy a stock when the price crosses over the SMA value.
 
 We will now use a strategy based on SMA (Short Moving Average) where:
 
@@ -117,7 +117,7 @@ cerebro.adddata(data)
 cerebro.broker.setcash(1000.0)
 
 # Add the strategy to the cerebro object
-cerebro.addstrategy(TestStrategy)
+cerebro.addstrategy(SmaStrategy)
 
 # Set the commission - 0.1% ... divide by 100 to remove the %
 cerebro.broker.setcommission(commission=0.001)
@@ -132,7 +132,7 @@ print('Final Portfolio Value: %.2f' % cerebro.broker.getvalue())
 Run the script to observe the output!
 
 ```
-python step1.py
+python step3.py
 
 ```{{execute}}
 

@@ -4,9 +4,10 @@ Parameters can be assigned within the class strategy by assigning a tuple of all
 
 Alternatively, we could pass these values when adding the strategy to Cerebro. For example, `cerebro.addstrategy(TestStrategy, myparam=20, exitbars=7)`
 
-Let's create a .py file to edit our previous strategy to implement parameters.
+Let's exit the python console, install backtrader and create a .py file to edit our previous strategy to implement parameters.
 ```
 exit()
+pip install backtrader
 touch step1.py
 ```{{execute}}
 
