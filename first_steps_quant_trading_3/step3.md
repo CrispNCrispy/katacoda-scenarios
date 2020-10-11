@@ -20,7 +20,7 @@ df['ewma_alpha_0.5'] = adj_close_px.ewm(alpha=0.5, adjust=False).mean()
 
 # Plot the adjusted closing price, the short and long windows of rolling means
 # Plotting from January 2018 for clearer visualization
-fig = plt.figure()
+fig = Figure()
 plt = df.loc['2018-01-01':,['Adj_Close', 'ewma_alpha_0.1', 'ewma_alpha_0.5']].plot(figsize=(12,8))
 fig.savefig('exp_moving_avg.png')
 </pre>

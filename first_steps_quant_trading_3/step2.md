@@ -13,6 +13,7 @@ In python, we can use the `rolling()` method to create a series of subsets based
 <pre class="file" data-filename="step2.py" data-target="append">
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
 import numpy as np
 
 df =  pd.read_csv("https://raw.githubusercontent.com/dswh/python_fundamentals/master/images/apple_stock_eod_prices.csv",
@@ -39,7 +40,7 @@ df['sma_40'] = adj_close_px.rolling(window=40).mean()
 df['sma_252'] = adj_close_px.rolling(window=252).mean()
 
 # Plot the adjusted closing price, the short and long windows of rolling means
-fig = plt.figure()
+fig = Figure()
 plt = df[['Adj_Close', 'sma_40', 'sma_252']].plot(figsize=(12,8))
 fig.savefig('moving_avg.png')
 </pre>
@@ -51,9 +52,9 @@ Now, let's add the code to calculate the cumulative moving average and plot it a
 df['cma'] = adj_close_px.expanding().mean()
 
 # Plot the adjusted closing price, the short and long windows of rolling means
-fig2 = plt.figure()
+fig = Figure()
 plt = df[['Adj_Close', 'cma']].plot(figsize=(12,8))
-fig2.savefig('cumulative_moving_avg.png')
+fig.savefig('cumulative_moving_avg.png')
 </pre>
 
 
