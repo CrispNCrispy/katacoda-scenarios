@@ -4,14 +4,6 @@
   "difficulty": "Intermediate",
   "time": "15 minutes",
   "details": {
-    "assets":{
-      "client": [
-        {
-          "file": "apple_stock_eod_prices.csv",
-          "target": "~/"
-        }
-      ]
-    },
     "steps": [
       {
         "title": "Learning about Bollinger Bands",
