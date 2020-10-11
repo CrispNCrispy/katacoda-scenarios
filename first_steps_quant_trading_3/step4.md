@@ -13,8 +13,8 @@ min_periods = 75
 vol = adj_close_px.rolling(min_periods).std() * np.sqrt(min_periods) 
 
 # Plot the volatility
-fig = plt.figure()
-plt = vol.plot(figsize=(10, 8))
+fig, ax = plt.subplots( nrows=1, ncols=1 ) 
+vol.plot(figsize=(10, 8),ax=ax)
 
 # Show the plot
 fig.savefig('vol.png')
