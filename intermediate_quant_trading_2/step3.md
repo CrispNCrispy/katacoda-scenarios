@@ -14,7 +14,7 @@ touch step3.py
 
 Open the newly created file by clicking: `step3.py`{{open}}
 
-<pre class="file" data-filename="step2.py" data-target="append">
+<pre class="file" data-filename="step3.py" data-target="append">
 import backtrader as bt # Import the backtrader platform
 from datetime import datetime  # For datetime objects
 

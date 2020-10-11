@@ -14,7 +14,7 @@ touch step4.py
 
 Open the newly created file by clicking: `step4.py`{{open}}
 
-<pre class="file" data-filename="step2.py" data-target="append">
+<pre class="file" data-filename="step4.py" data-target="append">
 import backtrader as bt # Import the backtrader platform
 from datetime import datetime  # For datetime objects
 
@@ -142,7 +142,7 @@ Read the code, read the comments and execute the code to observe:
 Note: Buying and selling of only 1 stock is happening as of right now.
 
 ```
-python step3.py
+python step4.py
 
 ```{{execute}}
 
