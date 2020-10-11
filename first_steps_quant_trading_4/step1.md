@@ -6,14 +6,15 @@ We shall be applying two strategies.
 
 For the first step, we will import our libraries, read our data, compute simple moving average for two windows (short term of 50 and long term of 120) and compute exponential moving average with alpha of 0.1. We will create a separate dataframe to store these values. At the same time, for both the strategies, we will initialize a 'signals' column and a 'positions' column. We shall explain what these two columns are in subsequent steps. This should serve as a recap from the previous scenarios.
 
-Setup a new python script:
+Let's exit the python shell and setup a new python script:
 ```
+exit()
 touch step1.py
 ```{{execute}}
 
 Open `step1.py`{{open}}  in the editor.
 
-<pre class="file" data-filename="step4.py" data-target="append">
+<pre class="file" data-filename="step1.py" data-target="append">
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
