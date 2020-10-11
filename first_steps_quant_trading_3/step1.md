@@ -1,9 +1,9 @@
 It's time to dive into the fundamentals of strategy building. 
 
 We'll be focussing on 2 very important concepts:
-1. Moving Averages
-(a) Simple Moving Average
-(b) Cumulative Moving Average
+1. Moving Averages  
+(a) Simple Moving Average  
+(b) Cumulative Moving Average  
 (c) Exponential Moving Average
 2. Volatility Calculation
 

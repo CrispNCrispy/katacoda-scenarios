@@ -4,8 +4,9 @@ Side Note: A series is nothing but a data structure representing a single column
 
 For **Log Return**, we will be using numpy's `log()` function to compute the log values of the Adjusted Close value series. But in this case, since the `log()` function merely computes the log values and not the log return, we use the `shift()` method associated with a series in conjunction to divide the log value of the current row with the previous row.
 
-Let's create a new file:
+Let's exit the python shell and create a new file:
 ```
+exit()
 touch step2.py
 ```{{execute}}
 
@@ -39,10 +40,9 @@ These lines would essentially create two new columns in our dataframe, `simple_r
 
 Now run the script. Notice the two new created columns at the very end of the dataframe. Also notice the `NA` values in the first row. This happens because the there is no row before the first row to compute a return from.
 
-Let's now exit from the python shell and run step2.py.
+Let's now run step2.py.
 
 ```
-exit()
 python step2.py
 
 ```{{execute}}

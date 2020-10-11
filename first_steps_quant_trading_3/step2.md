@@ -1,15 +1,16 @@
 For this step, we shall be calculating and plotting simple moving average and cumulative moving average.
 
-Let's create a new file:
+Let's exit the python shell and create a new file:
 ```
+exit()
 touch step2.py
 ```{{execute}}
 
 Open `step2.py`{{open}}  in the editor.
 
-In python, we can use the `rolling()` method to create a series of subsets based on the window size(i.e. number of days) and then cascade it with the `mean()` function to calculate the average over that window of data. With a similar logic, we use the `expanding()` method cascaded with the `mean()` function to calculate the cumulative moving average.
+In python, we can use the `rolling()` method to create a series of subsets based on the window size (i.e. number of days) and then cascade it with the `mean()` function to calculate the average over that window of data. With a similar logic, we use the `expanding()` method cascaded with the `mean()` function to calculate the cumulative moving average.
 
-<pre class="file" data-filename="step3.py" data-target="append">
+<pre class="file" data-filename="step2.py" data-target="append">
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -50,9 +51,9 @@ Now, let's add the code to calculate the cumulative moving average and plot it a
 df['cma'] = adj_close_px.expanding().mean()
 
 # Plot the adjusted closing price, the short and long windows of rolling means
-fig = plt.figure()
+fig2 = plt.figure()
 plt = df[['Adj_Close', 'cma']].plot(figsize=(12,8))
-fig.savefig('cumulative_moving_avg.png')
+fig2.savefig('cumulative_moving_avg.png')
 </pre>
 
 
