@@ -11,7 +11,7 @@ The background machinery adds a default sizer to a Strategy if the user has not 
 `class SizerFix(SizerBase):
     params = (('stake', 1),)`
 
-While there are different ways to change this value and alter it for more complex stakes ([](https://www.backtrader.com/docu/sizers/sizers/)), we will focus on just one where we change this default sizer value.
+While there are different ways to change this value and alter it for more complex stakes, we will focus on just one where we change this default sizer value.
 
 Via the cerebro object, we will set a fixed size using the following command:
 `cerebro.addsizer(bt.sizers.SizerFix, stake=20)`
