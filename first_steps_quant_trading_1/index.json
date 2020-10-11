@@ -3,6 +3,14 @@
   "description": "Accessing data and loading them into easy to manipulate pandas dataframes",
   "difficulty": "Beginner",
   "time": "15 minutes",
+  "details": {
+    "assets":{
+      "client": [
+        {
+          "target": "~/"
+        }
+      ]
+    },
     "steps": [
       {
         "title": "Environment Setup",
