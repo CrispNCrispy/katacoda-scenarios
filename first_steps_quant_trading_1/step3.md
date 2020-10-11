@@ -44,7 +44,10 @@ df_apple = pdr.DataReader('AAPL',
 This will give us the data in a pandas dataframe which we can inspect using:
 
 <pre class="file" data-filename="step3.py" data-target="append">
+# First five rows
+print(df_apple.head())
 
+# Information about the dataframe
 print(df_apple.info())
 
 </pre>

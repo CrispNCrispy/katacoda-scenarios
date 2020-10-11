@@ -9,7 +9,7 @@ We are only going to cover Yahoo finance and pandas-datareader in this scenario.
 
 So, let's set up our environment first.
 
-Let's first exit the python shell (incase it is activated) to execute installation command in the terminal:
+Let's first exit the python shell to execute installation command in the terminal:
 ```
 exit()
 ```{{execute}}

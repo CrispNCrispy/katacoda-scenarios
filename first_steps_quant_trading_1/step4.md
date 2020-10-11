@@ -1,19 +1,19 @@
 We have the data loaded into dataframes but we don't know much about what it contains and what each column represents.
 
 We saw we have the following columns in the previous step:
-Date - specifies trading date
-Open - opening price
-High - maximum price during the day
-Low - minimum price during the day
-Close - close price adjusted for splits
-Volume - number of shares traded on a particular day.
-Split - Number of shares after split / Number of shares before
-Dividend -  Number of shares after dividend / Number of shares before.
-AdjOpen - adjusted opening price for that day
-AdjHigh - adjusted maximum price for that day
-AdjLow - adjusted lowest price for that day
-AdjClose - adjusted close price adjusted for both dividends and splits.
-AdjVolume - adjusted volume of shares traded
+* Date - specifies trading date
+* Open - opening price
+* High - maximum price during the day
+* Low - minimum price during the day
+* Close - close price adjusted for splits
+* Volume - number of shares traded on a particular day.
+* Split - Number of shares after split / Number of shares before
+* Dividend -  Number of shares after dividend / Number of shares before.
+* AdjOpen - adjusted opening price for that day
+* AdjHigh - adjusted maximum price for that day
+* AdjLow - adjusted lowest price for that day
+* AdjClose - adjusted close price adjusted for both dividends and splits.
+* AdjVolume - adjusted volume of shares traded
 
 Make sure you have the same `step3.py`{{open}} opened for this step as well.
 
@@ -43,4 +43,6 @@ python step3.py
 
 ```{{execute}}
 
-Looking at the summary statistics and movement of prices give us a high-level picture of how the apple stock has been performing for the past ~10 years. 
+Click `close_plot.png`{{open}} to visualize the plot of the Adjusted Close values.
+
+Looking at the summary statistics and movement of prices give us a high-level picture of how the apple stock has been performing for the past ~10 years.

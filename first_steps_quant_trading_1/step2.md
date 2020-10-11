@@ -33,6 +33,7 @@ This will give us the data in a pandas dataframe which we can inspect using:
 
 <pre class="file" data-filename="step2.py" data-target="append">
 
+# the head method with default arguments prints the first five rows
 print(df_apple.head())
 
 </pre>
