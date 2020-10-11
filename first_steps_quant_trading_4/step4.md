@@ -6,7 +6,7 @@ We will also be overwriting the 'sma_positions' column with the difference of th
 
 Open `step1.py`{{open}}  in the editor.
 
-<pre class="file" data-filename="step4.py" data-target="append">
+<pre class="file" data-filename="step1.py" data-target="append">
 # Create signals in the same way we did so in step 3, but this time we assign 1 as a signal whenever the short
 # MA is above the long MA
 
@@ -22,7 +22,7 @@ print(signals)
 
 Now, that the positions are generated, let's plot them to check our positions over the years
 
-<pre class="file" data-filename="step4.py" data-target="append">
+<pre class="file" data-filename="step1.py" data-target="append">
 # Initialize the plot figure
 fig = plt.figure(figsize=(12,10))
 

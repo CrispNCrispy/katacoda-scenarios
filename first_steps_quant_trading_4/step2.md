@@ -4,9 +4,9 @@ We will now be adding the following columns to the new dataframe for the first s
 2. `ema` - Compute the exponential moving average for an alpha value of 0.1.
 3. `ema_positions` - We will initialize this to zeros. In step 3, after altering the 'ema_signal' column, we will subtract the 'ema_signal' value of the previous row from the current row. This will result in a value of +1 everytime the exponential moving average crosses above the price, -1 everytime the exponential moving average crosses below the price and 0 everywhere else. We will then use the +1's and -1's in out plot to understand buy and sell signals.
 
-Open `step1.py`{{open}}  in the editor.
+Open the same file, `step1.py`{{open}}  in the editor.
 
-<pre class="file" data-filename="step4.py" data-target="append">
+<pre class="file" data-filename="step1.py" data-target="append">
 # Initialize to 0s
 signals['ema_signal'] = 0.0
 
@@ -24,7 +24,9 @@ We will now be adding the following columns to the new dataframe for the second 
 3. `long_mavg` - Compute the moving average values for a window of 120 days.
 4. `sma_positions` - We will initialize this to zeros. In step 4, after altering the 'sma_signal' column, we will subtract the 'sma_signal' value of the previous row from the current row. This will result in a value of +1 everytime the short moving average crosses above the long moving average, -1 everytime the short moving average crosses below the long moving average and 0 everywhere else. We will then use the +1's and -1's in out plot to understand buy and sell signals.
 
-<pre class="file" data-filename="step4.py" data-target="append">
+Open the same file, `step1.py`{{open}}  in the editor.
+
+<pre class="file" data-filename="step1.py" data-target="append">
 # Initialize to 0s
 signals['sma_signal'] = 0.0
 

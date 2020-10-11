@@ -6,7 +6,7 @@ We will also be overwriting the `ema_positions` column with the difference of th
 
 Open `step1.py`{{open}}  in the editor.
 
-<pre class="file" data-filename="step4.py" data-target="append">
+<pre class="file" data-filename="step1.py" data-target="append">
 # Change signal values to 1 whenever it is above the price
 signals['ema_signal'] = np.where(signals['ema'] > df['Close'], 1.0, 0.0)
 
@@ -19,7 +19,7 @@ print(signals)
 
 With all our values ready, we can now plot our first strategy.
 
-<pre class="file" data-filename="step4.py" data-target="append">
+<pre class="file" data-filename="step1.py" data-target="append">
 # Initialize the plot figure
 fig = plt.figure(figsize=(12,10))
 
