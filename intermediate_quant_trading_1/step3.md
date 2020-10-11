@@ -60,7 +60,7 @@ python step3.py
 
 ```{{execute}}
 
-backtrader comes with a set of Data Feed parsers (all CSV Based currently) to let you load data from different sources.
+Backtrader comes with a set of Data Feed parsers (all CSV Based currently) to let you load data from different sources.
 * Yahoo (online or already saved to a file)
 * VisualChart (see www.visualchart.com)
 * Backtrader CSV (own cooked format for testing)

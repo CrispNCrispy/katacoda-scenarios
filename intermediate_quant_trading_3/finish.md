@@ -1,5 +1,5 @@
 # Congratulations!
-You've completed the seventh string in the series - Quantitatoive Trading with Python.
+You've completed the seventh string in the series - Quantitative Trading with Python.
 
 Here's a quick summary of key takeaways from this katacoda:
 

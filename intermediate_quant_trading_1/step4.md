@@ -70,4 +70,4 @@ python step4.py
 
 ```{{execute}}
 
-You now have an understanding of how one can use the backtrader framework. In the next Scenario, we will build a simple buy and sell strategy, while at the same time build upon what we have learnt in this scenario.
+You now have a basic understanding of how one can use the backtrader framework. In the next Scenario, we will build a simple buy and sell strategy, while at the same time build upon what we have learnt in this scenario.

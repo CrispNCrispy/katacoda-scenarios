@@ -55,6 +55,6 @@ python step2.py
 
 ```{{execute}}
 
-Since all we did is instantiate the cerebro object and run it. Since we did not yet add a strategy to the object, the object currently does nothing when run. This isn't much but it's important to understand how and what we are trying to achieve in a step by step manner. In the background, the Cerebro engine created a broker with a default amount of 10000.
+Since we did not yet add a strategy to the object, the object currently does nothing when run. This isn't much but it's important to understand how and what we are trying to achieve in a step by step manner. In the background, the Cerebro engine created a broker with a default amount of 10000.
 
 Next, we shall build upon this to add a Data Feed and Set our cash amount explicitly.
