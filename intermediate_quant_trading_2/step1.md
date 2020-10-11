@@ -1,8 +1,9 @@
 Now that we have seen how to go about using the backtrader API in a simple fashion, it's time to create a strategy that involves buying and selling of stocks. For our first step, we will focus on buying stocks. We will incorporate a simple strategy - Buy whenever the close prices drops for 3 bars in a row.
 
-Let's create a .py file.
+Let's exit the python shell, install backtrader and create a .py file.
 ```
 exit()
+pip install backtrader
 touch step1.py
 ```{{execute}}
 
@@ -73,10 +74,13 @@ Read the code, read the comments and execute the code to observe:
 * Close prices of every day in 2019
 * Buy orders
 * Change in our portfolio value
+
+Let's execute the code.
+
 ```
 python step1.py
-
 ```{{execute}}
+
 
 Several “BUY” creation orders were issued, our porftolio value has increased in one year.
 
