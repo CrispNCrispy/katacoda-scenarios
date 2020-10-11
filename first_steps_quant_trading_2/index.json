@@ -4,6 +4,14 @@
   "difficulty": "Beginner",
   "time": "15 minutes",
   "details": {
+    "assets":{
+      "client": [
+        {
+          "file": "apple_stock_eod_prices.csv",
+          "target": "~/"
+        }
+      ]
+    },
     "steps": [
       {
         "title": "Learn about Simple and Log Returns",
