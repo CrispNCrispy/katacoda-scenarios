@@ -9,12 +9,12 @@ We are only going to cover Yahoo finance and pandas-datareader in this scenario.
 
 So, let's set up our environment first.
 
-Let's first exit the python shell to execute installation command in the terminal:
+Let's first exit the python shell (incase it is activated) to execute installation command in the terminal:
 ```
 exit()
 ```{{execute}}
 
-The next step is to install the required libraries that will facilitate data from yahoo finance and FRED(Federal Reserve Economic Data).
+The next step is to install the required libraries that will facilitate data from yahoo finance and FRED (Federal Reserve Economic Data).
 
 ```
 pip install yfinance pandas-datareader
