@@ -1,0 +1,48 @@
+{
+  "title": "Quant Trading - Backtesting with Backtrader framework",
+  "description": "Creation of a simple buy and sell strategy",
+  "difficulty": "Intermediate",
+  "time": "15 minutes",
+  "details": {
+    "assets":{
+      "client": [
+        {
+          "file": "apple_stock_eod_prices.csv",
+          "target": "~/"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Creation of a Buy Strategy",
+        "text": "step1.md"
+      },
+      {
+        "title": "Creation of a Sell Strategy",
+        "text": "step2.md"
+      },
+      {
+        "title": "Buy/Sell Execution Notifications",
+        "text": "step3.md"
+      },
+      {
+        "title": "Commissions and Profit Notifications",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "run-python3.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "vscode-terminal-split",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart python using `python` command.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "python:3.8"
+  }
+}

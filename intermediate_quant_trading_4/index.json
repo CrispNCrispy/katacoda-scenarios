@@ -1,0 +1,48 @@
+{
+  "title": "Quant Trading - Backtesting with Backtrader framework",
+  "description": "A Bollinger Band Strategy",
+  "difficulty": "Intermediate",
+  "time": "15 minutes",
+  "details": {
+    "assets":{
+      "client": [
+        {
+          "file": "apple_stock_eod_prices.csv",
+          "target": "~/"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Learning about Bollinger Bands",
+        "text": "step1.md"
+      },
+      {
+        "title": "Coding the Strategy class defintion",
+        "text": "step2.md"
+      },
+      {
+        "title": "Running the strategy",
+        "text": "step3.md"
+      },
+      {
+        "title": "Plotting the strategy",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "run-python3.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "vscode-terminal-split",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart python using `python` command.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "python:3.8"
+  }
+}

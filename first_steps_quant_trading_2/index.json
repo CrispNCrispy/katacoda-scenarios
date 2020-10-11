@@ -1,0 +1,48 @@
+{
+  "title": "Leanring, Calculating and Plotting various types of Returns",
+  "description": "To learn about, calculate and plot various types of returns",
+  "difficulty": "Beginner",
+  "time": "15 minutes",
+  "details": {
+    "assets":{
+      "client": [
+        {
+          "file": "apple_stock_eod_prices.csv",
+          "target": "~/"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Learn about Simple and Log Returns",
+        "text": "step1.md"
+      },
+      {
+        "title": "Calculate Simple and Log Returns",
+        "text": "step2.md"
+      },
+      {
+        "title": "Calculate Simple Daily Cumulative Returns",
+        "text": "step3.md"
+      },
+      {
+        "title": "Plot Simple Daily Cumulative Returns",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "run-python3.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "vscode-terminal-split",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart python using `python` command.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "python:3.8"
+  }
+}
