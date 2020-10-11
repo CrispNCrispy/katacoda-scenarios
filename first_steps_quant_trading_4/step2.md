@@ -24,8 +24,6 @@ We will now be adding the following columns to the new dataframe for the second 
 3. `long_mavg` - Compute the moving average values for a window of 120 days.
 4. `sma_positions` - We will initialize this to zeros. In step 4, after altering the 'sma_signal' column, we will subtract the 'sma_signal' value of the previous row from the current row. This will result in a value of +1 everytime the short moving average crosses above the long moving average, -1 everytime the short moving average crosses below the long moving average and 0 everywhere else. We will then use the +1's and -1's in out plot to understand buy and sell signals.
 
-Open the same file, `step1.py`{{open}}  in the editor.
-
 <pre class="file" data-filename="step1.py" data-target="append">
 # Initialize to 0s
 signals['sma_signal'] = 0.0
