@@ -1,8 +1,9 @@
 Let's start with the class definition of the strategy.
 
-Let's create a .py file to begin our code.
+Let's exit the python shell, install backtrader and create a .py file to begin our code.
 ```
 exit()
+pip install backtrader
 touch step2.py
 ```{{execute}}
 
