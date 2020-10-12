@@ -1,29 +1,24 @@
 {
   "title": "Computer Vision with TensorFlow 2.x",
-  "description": "Learning to train a neural networks to recognize items of clothing from the Fashion MNIST dataset using TensorFlow 2.x.",
+  "description": "Learning how to use neural networks to solve regression and classification problems",
   "difficulty": "Beginner",
   "time": "15 minutes",
   "details": {
-    "assets":{
-      "client": [
-        {"file": "dataset.png", "target": "~/"}
-      ]
-    },
     "steps": [
       {
-        "title": "Simple Regression using a neural network",
+        "title": "Regression using a neural network (1/2)",
         "text": "step1.md"
       },
       {
-        "title": "Classification using a neural network",
+        "title": "Regression using a neural network (2/2)",
         "text": "step2.md"
       },
       {
-        "title": "Image Classification (1/2)",
+        "title": "Classification using a neural network (1/2)",
         "text": "step3.md"
       },
       {
-        "title": "Image Classification (2/2)",
+        "title": "Classification using a neural network (2/2)",
         "text": "step4.md"
       }
     ],

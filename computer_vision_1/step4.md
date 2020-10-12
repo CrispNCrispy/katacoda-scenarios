@@ -1,84 +1,72 @@
+It is now time to build, compile and fit our model. Pay attention to the comments in the code for an explanation of certain key concepts.
 
-It always takes a bit of time to reach the desired level of accuracy for a model. We have to keep experimenting with the number of epochs we should train the model for.
+<pre class="file" data-filename="step3.py" data-target="append">
 
-Wouldn't it be great if we could stop the training when we reach a max accuracy(or any other valuable metric)?
-For example, is we are monitoring accuracy, we should be able to stop the training if our model's accuracy has stopped improving in `n` consecutive epochs. Luckily, we can do that using Callbacks!
+'''
+As mentioned earlier, we are now going to use one hidden layer consisting of 10 nodes.
 
-Let's quickly create a new file:
-```
-touch step4.py
-```{{execute}}
+We will be using a 'relu' activation function for the hidden layer - a popular choice in 
+recent ML literature.
 
-Open the file `step4.py`{{open}}.
+We will be using a 'softmax' activation function for the output later because we want
+probability values for each class.
 
-Import tensorflow and add the following steps to prepare fashion mnist data for training and testing as done in step 2
-
-<pre class="file" data-filename="step4.py" data-target="append">
-
-import tensorflow as tf
-print(tf.__version__)
-
-# using the same dataset as in step 3
-
-mnist = tf.keras.datasets.fashion_mnist
-(training_images, training_labels), (test_images, test_labels) = mnist.load_data()
-training_images=training_images/255.0
-test_images=test_images/255.0
-
-</pre>
-
-## Define the EarlyStopping callback
-
-<pre class="file" data-filename="step4.py" data-target="append">
-
-callbacks = tf.keras.callbacks.EarlyStopping(
-                    monitor='val_accuracy',
-                    mode='max', min_delta=0.001,
-                    patience = 2)
-
-
-</pre>
-
-Arguments:
-`monitor`: Passing `accuracy` to be monitored in the EarlyStopping callback instance.
-
-`mode` : `max` as we aim for max accuracy. For `loss` it would have been `min`.
-
-`min_delta = 0.001`: 	Minimum change in the monitored quantity to qualify as an improvement, i.e. an absolute change of less than min_delta, will count as no improvement.
-
-`patience`: Number of epochs with no improvement after which training will be stopped.
-
-
-## Defining the model with the same layers as in Scenario 4.
-
-<pre class="file" data-filename="step4.py" data-target="append">
-
-model = tf.keras.models.Sequential([
-  tf.keras.layers.Flatten(),
-  tf.keras.layers.Dense(512, activation=tf.nn.relu),
-  tf.keras.layers.Dense(10, activation=tf.nn.softmax)
+We will be using 3 output nodes, with each node's output being a value between 0 and 1, 
+which will add up to 1 (because of softmax). Each node will indicate the probability of 
+a particular class in the target labels.
+'''
+model = keras.models.Sequential([
+    keras.layers.Dense(units=10, activation='relu', input_shape=(4,)),
+    keras.layers.Dense(units=3, activation='softmax')
 ])
 
-# compile the model
-model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+
+'''
+We are using the RMSProp optimizer.
+
+Categorical Cross Entropy is the go to loss function for a classification problem.
+
+It is sparse because our target values are in {0,1,2} instead of one-hot encoded.
+
+We are adding accuracy as metric to be monitored.
+'''
+model.compile(optimizer='rmsprop',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
+
+
+
+'''
+We are providing the test data as the validation_data argument. As a result we'll be able to see the val_loss
+and val_accuracy after every epoch.
+'''
+model.fit(X_train,y_train,epochs=100,validation_data=(X_test,y_test))
 
 </pre>
 
+Let's plot the accuracy and loss values.
 
-## Passing the callback to the fit() method.
+<pre class="file" data-filename="step3.py" data-target="append">
 
-<pre class="file" data-filename="step4.py" data-target="append">
+plt.plot(model.history.history['accuracy'],label='Train Accuracy')
+plt.plot(model.history.history['val_accuracy'],label='Test Accuracy')
+plt.legend()
+plt.savefig('accuracy_plot.png')
 
-# add a high number(100) of epochs to witness early stopping
-model.fit(training_images, training_labels, epochs=100, callbacks=[callbacks])
+plt.plot(model.history.history['loss'],label='Train Loss')
+plt.plot(model.history.history['val_loss'],label='Test Loss')
+plt.legend()
+plt.savefig('loss_plot.png')
 
 </pre>
 
-Let's run the script to see what level of accuracy we achieve:
+Execute the code to view the output and the plots.
 
 ```
-python step4.py
+python step3.py
 
 ```{{execute}}
 
-This is a useful way to fine-tune our model given the concerned performance metric.
+Click `accuracy_plot.png`{{open}} to visualize the accuracy plot.
+Click `loss_plot.png`{{open}} to visualize the loss plot.
+
+We can clearly see the accuracy improving and loss decreasing - exactly what we expected. The number of Dense units and the acitvation function in the hidden layer is something that could be changed to obtain better results. We could also add more hidden layers and change the optimizer (or change the learning rate of the optimizer). There is a lot of trial and error that happens when we train a neural network.

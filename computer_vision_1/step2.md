@@ -1,123 +1,61 @@
-In this, we will repeat what we did, but with a few major changes:
-* Bigger Neural Network - 1 hidden layer with multiple nodes.
-* Classification Problem - In the previous step, we implemented a regression problem involving a continuous target value. In a classification problem, the target values are discrete finite values such as 0, 1 and 2 or with values in a one-hot encoded format where 2 could be respresented as [0, 0, 1].
-* Real Dataset - In this step, we will be working with the famous iris dataset. The dataset contains 3 classes of 50 instances each, where each class refers to a type of iris plant. Each instance also has 4 features this time - sepal length, sepal width, petal length and petal width. In our previous step, we just used one feature - number of bedrooms.
-* Splitting our dataset into two parts - a train dataset and a test dataset. We will be reserving 80% of the data for training on the model.fit method and 20% will be used to test the accuracy of the model. The reason we do this is because we want to test the model on data it has not trained on (or not seen), so as to avoid this 'bias'.
+Now, we will create the simplest possible neural network with only 1 layer (output layer), and that layer has 1 neuron/node, and the input shape to it is just 1 value (1 feature) .
 
-Create a new file where our code will reside:
+<pre class="file" data-filename="step1.py" data-target="append">
+'''
+Sequential() defines a model with a SEQUENCE (stack) of layers in the neural network 
+
+Dense() adds a layer of neurons/nodes
+
+By default, since we are not specifying an activation function, the output is simply going 
+to be a linear combination of the inputs - exactly what we want.
+'''
+model = tf.keras.Sequential([
+        keras.layers.Dense(units=1, input_shape=(1,))
+        ])
+
+</pre>
+
+If we look at the dense network image from step 1, the model is basically one single neuron/node in the input layer (which corresponds to number of bedrooms) and one single node in the output layer which is the price of the house. There are no hidden layers in our model as of right now.
+
+Now it's time to compile our Neural Network. When we do so, we have to specify 2 functions, a loss and an optimizer.
+
+The LOSS function measures the guessed answers against the known correct answers and measures how well or how badly it did.
+
+The OPTIMIZER function makes guesses the output. Based on loss function output, it will try to minimize the loss.
+
+We are going to use the stochastic gradient descent `sgd` as the `mean_squared_error` as our loss function for the model. `mean_squared_error` is a very common metric used in linear regression problems involving target variables that are continuous.
+
+<pre class="file" data-filename="step1.py" data-target="append">
+
+model.compile(optimizer='sgd', loss='mean_squared_error')
+
+</pre>
+
+After compiling comes the fitting. The process of training the neural network, where it learns the relationship between the `bedrooms` and `prices` is in the model.fit call. It is iteratively trying to figure out the best weights.
+
+
+<pre class="file" data-filename="step1.py" data-target="append">
+
+# The number of epochs is the number of passes over the entire dataset done in order to find the best weights.
+model.fit(bedrooms, prices, epochs=500)
+
+</pre>
+
+Let's now try to predict the price for an eight bedroom house and obtain the weights of the model.
+
+
+<pre class="file" data-filename="step1.py" data-target="append">
+
+print("Price of the 8-bedroom house is: ", model.predict([10.0]))
+print(model.weights)
+
+</pre>
+
+Finally, let's run the script:
 
 ```
-touch step2.py
-```{{execute}}
-
-Opening the file that we just created `step2.py`{{open}}.
-
-Let's start with imports. 
-
-<pre class="file" data-filename="step2.py" data-target="append">
-
-import tensorflow as tf
-import numpy as np
-from tensorflow import keras
-
-# For plotting the accuracy and loss over the epochs
-import matplotlib.pyplot as plt
-
-# Library which has the dataset built-in
-from sklearn.datasets import load_iris
-
-# For splliting our entire data into two parts
-from sklearn.model_selection import train_test_split
-
-</pre>
-
-Let's load and view our dataset.
-
-<pre class="file" data-filename="step2.py" data-target="append">
-
-data = load_iris()
-X = data['data']
-y = data['target']
-
-print(X[:10])
-print(y[:10])
-
-</pre>
-
-Execute the dataset to view the first 10 instances.
-
-```
-python step2.py
+python step1.py
 
 ```{{execute}}
 
-The data is already preprocessed, so we do not have to do anything to prepare it and can use it directly. Also we don't really need to care about which column represents what feature - we'll let the model figure out the patterns as only the final target is of relevance to us.
-
-Let's split our dataset, build, compile and fit our model. Pay attention to the comments in the code for an explanation of certain key concepts.
-
-<pre class="file" data-filename="step2.py" data-target="append">
-
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test  = train_test_split(X,y,test_size=0.2)
-
-'''
-As mentioned earlier, we are now going to use one hidden layer consisting of 10 nodes.
-
-We will be using a 'relu' activation function for the hidden layer - a popular choice in 
-recent ML literature.
-
-We will be using a 'softmax' activation function for the output later because we want
-probability values for each class.
-
-We will be using 3 output nodes, with each node's output being a value between 0 and 1, 
-which will add up to 1 (because of softmax). Each node will indicate the probability of 
-a particular class in the target labels.
-'''
-model = keras.models.Sequential([
-    keras.layers.Dense(units=10, activation='relu', input_shape=(4,)),
-    keras.layers.Dense(units=3, activation='softmax')
-])
-
-
-
-'''
-We are using the RMSProp optimizer.
-
-Categorical Cross Entropy is the go to loss function for a classification problem.
-
-It is sparse because our target values are in {0,1,2} instead of one-hot encoded.
-
-We are adding accuracy as metric to be monitored.
-'''
-model.compile(optimizer='rmsprop',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
-
-
-
-'''
-We are providing the test data as the validation_data argument. As a result we'll be able to see the val_loss
-and val_accuracy after every epoch.
-'''
-model.fit(X_train,y_train,epochs=100,validation_data=(X_test,y_test))
-
-</pre>
-
-Let's plot the accuracy and loss values.
-
-<pre class="file" data-filename="step2.py" data-target="append">
-
-plt.plot(model.history.history['accuracy'],label='Train Accuracy')
-plt.plot(model.history.history['val_accuracy'],label='Test Accuracy')
-plt.legend()
-plt.savefig('accuracy_plot.png')
-
-plt.plot(model.history.history['loss'],label='Train Loss')
-plt.plot(model.history.history['val_loss'],label='Test Loss')
-plt.legend()
-plt.savefig('loss_plot.png')
-
-</pre>
-
-Click `accuracy_plot.png`{{open}} to visualize the accuracy plot.
-Click `loss_plot.png`{{open}} to visualize the loss plot.
-
-We can clearly see the accuracy improving and loss decreasing - exactly what we expected. The number of Dense units and the acitvation function in the hidden layer is something that could be changed to obtain better results. We could also add more hidden layers and change the optimizer (or change the learning rate of the optimizer). There is a lot of trial and error that happens when we train a neural network.
+Notice the values of the weights and how it is very close to 50! This was a small synthetic dataset in which we used the smallest possible neural network. In the next step let's use a real dataset to solve a classification problem.
