@@ -1,0 +1,44 @@
+{
+  "title": "Computer Vision with TensorFlow 2.x",
+  "description": "Learning to train a neural networks to recognize items of clothing from the Fashion MNIST dataset using TensorFlow 2.x.",
+  "difficulty": "Beginner",
+  "time": "15 minutes",
+  "details": {
+    "assets":{
+      "client": [
+        {"file": "dataset.png", "target": "~/"}
+      ]
+    },
+    "steps": [
+      {
+        "title": "Loading the dataset",
+        "text": "step1.md"
+      },
+      {
+        "title": "Splitting and normalizaing the data",
+        "text": "step2.md"
+      },
+      {
+        "title": "Creating and compiling the model",
+        "text": "step3.md"
+      },
+      {
+        "title": "Fitting and evaluating the model",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart python using `python` command.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "python:3.8"
+  }
+}
