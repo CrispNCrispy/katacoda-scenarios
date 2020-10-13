@@ -1,6 +1,6 @@
 {
   "title": "Computer Vision with TensorFlow 2.x",
-  "description": "Learning to train a neural networks to recognize items of clothing from the Fashion MNIST dataset using TensorFlow 2.x.",
+  "description": "Learning to train a dense neural networks to recognize items of clothing from the Fashion MNIST dataset using TensorFlow 2.x.",
   "difficulty": "Beginner",
   "time": "15 minutes",
   "details": {

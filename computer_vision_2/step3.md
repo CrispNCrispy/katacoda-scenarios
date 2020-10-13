@@ -8,14 +8,14 @@ For this model, we'll be using a bunch of layers. Let us also output the summary
 <pre class="file" data-filename="step1.py" data-target="append">
 
 model = tf.keras.models.Sequential([tf.keras.layers.Flatten(input_shape=(28,28)), 
-                                    tf.keras.layers.Dense(128, activation=tf.nn.relu), 
+                                    tf.keras.layers.Dense(256, activation=tf.nn.relu), 
                                     tf.keras.layers.Dense(10, activation=tf.nn.softmax)])
 
 print(model.summary())
 
 </pre>
 
-The model is learning over 100,000 parameters! You can try changing the number of units in the hidden layer (first Dense layer) to see how the number of parameters change. Obviously, the more complex the model, the longer it takes to train.
+The model is learning over 200k parameters! You can try changing the number of units in the hidden layer (first Dense layer) to see how the number of parameters change. Obviously, the more complex the model, the longer it takes to train.
 
 Let's understand each of these keywords here:
 

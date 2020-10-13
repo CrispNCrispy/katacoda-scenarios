@@ -31,4 +31,4 @@ python step1.py
 
 ```{{execute}}
 
-For me, that returned a accuracy of about .8838, which means it was about 88% accurate. As expected it probably would not do as well with unseen data as it did with data it was trained on!
+For me, that returned a accuracy of about .8945 (89.45%) for the training set and 0.8797 (87.97%) for the test set. As expected it probably would not do as well with unseen data as it did with data it was trained on!
