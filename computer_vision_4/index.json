@@ -6,24 +6,25 @@
   "details": {
     "assets":{
       "client": [
-        {"file": "dataset.png", "target": "~/"}
+        {"file": "preprocess_data.py", "target": "~/"}
+        {"file": "model.py", "target": "~/"}
       ]
     },
     "steps": [
       {
-        "title": "Importing DL Libraries - TensorFlow and NumPy",
+        "title": "EarlyStopping Callback (1/2)",
         "text": "step1.md"
       },
       {
-        "title": "Creating the simplest single-layer Neural Network",
+        "title": "EarlyStopping Callback (2/2)",
         "text": "step2.md"
       },
       {
-        "title": "Compiling the model",
+        "title": "LeanringRateScheduler Callback (1/2)",
         "text": "step3.md"
       },
       {
-        "title": "Predicting prices of a house",
+        "title": "LeanringRateScheduler Callback (2/2)",
         "text": "step4.md"
       }
     ],

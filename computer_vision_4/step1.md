@@ -1,0 +1,61 @@
+In the last scenario, we saw how to create, train and evaluate a convolution neural network. In this scenario we will focus on addiitonal tools that are commonly used to help achieve better results, particularly - Callbacks.
+
+## EarlyStopping Callback
+What happens if we run too many epochs? Chances are that the model 'overfits' on the training data, meaning that it fits 'too perfectly' on the training data that it starts performing worse on the test data. We want to avoid this. Wouldn't it be great if we could stop the training when we reach a max accuracy(or any other valuable metric).
+
+For example, if we are monitoring accuracy, we should be able to stop the training if our model's accuracy has stopped improving in `n` consecutive epochs. Luckily, we can do that using the Early Stopping Callback!
+
+Create a new file where our code will reside:
+
+```
+touch step1.py
+```{{execute}}
+
+Opening the file that we just created `step1.py`{{open}}.
+
+We will be using the same Fashion MNIST dataset. Append all the following code, which will import the libraries, clean the data for training and create the model. Don't worry about the two function we are importing, we just want to be able to quickly clean the data and obtain the model.
+
+<pre class="file" data-filename="step1.py" data-target="append">
+
+import tensorflow as tf
+import matplotlib.pyplot as plt
+
+# Function to clean up the data
+from preprocess_data import prepare_data
+
+#Function to create the model
+from model import create_model
+
+mnist = tf.keras.datasets.fashion_mnist
+(training_images, training_labels), (test_images, test_labels) = mnist.load_data()
+
+training_images = prepare_data(training_images)
+test_images = prepare_data(test_images)
+
+model = create_model()
+
+print(model.summary())
+
+</pre>
+
+Let us now define the callback to include it when we are going to fit the model.
+
+<pre class="file" data-filename="step1.py" data-target="append">
+
+callback1 = tf.keras.callbacks.EarlyStopping(
+                    monitor='val_accuracy',
+                    mode='max', min_delta=0.001,
+                    patience = 2)
+
+</pre>
+
+Arguments:
+`monitor`: Passing `accuracy` to be monitored in the EarlyStopping callback instance.
+
+`mode` : `max` as we aim for max accuracy. For `loss` it would have been `min`.
+
+`min_delta = 0.001`: 	Minimum change in the monitored quantity to qualify as an improvement, i.e. an absolute change of less than min_delta, will count as no improvement.
+
+`patience`: Number of epochs with no improvement after which training will be stopped.
+
+With our callback defined, we will now move on to compiling and fitting our model.
