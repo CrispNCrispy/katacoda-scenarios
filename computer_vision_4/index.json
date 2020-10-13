@@ -1,12 +1,12 @@
 {
-  "title": "Computer Vision with TensorFlow 2.x",
+  "title": "Computer Vision with TensorFlow 2.x - Part 4",
   "description": "Learning to train a neural networks to recognize items of clothing from the Fashion MNIST dataset using TensorFlow 2.x.",
   "difficulty": "Beginner",
   "time": "15 minutes",
   "details": {
     "assets":{
       "client": [
-        {"file": "preprocess_data.py", "target": "~/"}
+        {"file": "preprocess_data.py", "target": "~/"},
         {"file": "model.py", "target": "~/"}
       ]
     },
