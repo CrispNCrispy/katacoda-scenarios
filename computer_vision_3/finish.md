@@ -1,5 +1,5 @@
 # Congratulations!
-You've completed the Computer Vision with TensorFlow task scenario.
+You've completed the third Computer Vision with TensorFlow scenario.
 
 You've learned the foundational concepts of Machine Learning and Computer Vision using TensorFlow, here's a quick summary of key takeaways from this katacoda:
 
