@@ -27,6 +27,13 @@ print(model.summary())
 
 </pre>
 
+Execute the code to see the model summary.
+
+```
+python step1.py
+
+```{{execute}}
+
 The model has just over 81k parameters compared to 200k in the last scenario! But will it get a higher accuracy? Let's find out.
 
 ### Compile the Model with optimizer, loss, and metrics.

@@ -9,7 +9,7 @@ model.fit(train_images, train_labels, epochs=5, batch_size=1024, validation_data
 
 </pre>
 
-You should later try to see if you can improve the performance by changing certain hyperparameters like epoch, or the optimizer, etc.
+You should later try to see if you can improve the performance by changing certain hyperparameters like number of epochs or the optimizer, etc.
 
 ## Plotting
 Let's plot the accuracy and loss values.

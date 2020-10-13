@@ -1,6 +1,4 @@
-Before we actually move on to working with images, let us first learn how to use Keras and build neural networks for simple problems. We will begin by solving a regression problem in step 1 and 2, and then a classification problem in step 3 and 4. In the second scenario, we shall put together whatever we learnt to solve an image classification problem.
-
-So, let's setup our environment first.
+Before we actually move on to working with images, let us first learn how to use Keras and build neural networks for simple problems. We will begin by solving a regression problem in step 1 and 2, and then a classification problem in step 3 and 4.
 
 Create a new file where our code will reside:
 
@@ -32,10 +30,12 @@ With our environment all set up, we'll try to build a neural network that predic
 This is what a neural network looks like:
 ![](https://miro.medium.com/max/770/1*eJ36Jpf-DE9q5nKk67xT0Q.jpeg)
 
-So, imagine we have a very simple house pricing model `50k + 50k per bedroom`, so that a 1 bedroom house costs 100k, a 2 bedroom house costs 150k and so on. We can write it using a general notation of **a + bx** where a is 50k, b is 50k and x is the number of bedrooms. Now we could have had many more features, such as square footage which would just extend our general notation to **a + bx + cy** where c is a constant value and y is the square footage. But let's stick to our simple house pricing model for ease of understanding. These unknowns are called the **weights** of the model.
+## A hypothetical model
+Imagine we have a very simple house pricing model `50k + 50k per bedroom`, so that a 1 bedroom house costs 100k, a 2 bedroom house costs 150k and so on. We can write it using a general notation of **a + bx** where a is 50k, b is 50k and x is the number of bedrooms. Now we could have had many more features, such as square footage which would just extend our general notation to **a + bx + cy** where c is a constant value and y is the square footage. But let's stick to our simple house pricing model for ease of understanding. These unknowns, **a** and **b**, are called the **weights** of the model.
 
-Our goal is to make a model that learns this pricing function from available data and predicts the house prices based on the number of bedrooms. Essentially, the neural network is trying to find the weight values through an iterative procedure. Once it finds these values, we just need to provide the **x** or the number of bedrooms and it will output the price. 
+Our goal is to make a model that learns this pricing function from available data and predicts the house prices based on the number of bedrooms. Essentially, the neural network is trying to find the weight values through an iterative procedure. Once it finds these values, we just need to provide the value of **x**, or the number of bedrooms and it will output the price. 
 
+## Data Creation
 Let's create some dummy data following the above formula:
 
 <pre class="file" data-filename="step1.py" data-target="append">
@@ -45,4 +45,4 @@ prices = np.array([150, 250, 300, 400, 550, 50])
 
 </pre>
 
-Observe that the data fits our made-up formula. We hope that by using keras, we can creat a neural network that will learn it just by providing the data.
+Observe that the data fits our made-up formula. We hope that by using keras, we can create a neural network that will learn it just by providing the data.

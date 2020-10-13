@@ -31,6 +31,7 @@ from sklearn.model_selection import train_test_split
 
 </pre>
 
+# Loading the dataset
 Let's load and view our dataset.
 
 <pre class="file" data-filename="step3.py" data-target="append">
@@ -53,6 +54,7 @@ python step3.py
 
 The data is already preprocessed, so we do not have to do anything to prepare it and can use it directly. Also we don't really need to care about which column represents what feature - we'll let the model figure out the patterns as only the final target is of relevance to us.
 
+# Splitting the dataset
 Let's split our dataset into the training and testing datasets. 
 
 <pre class="file" data-filename="step3.py" data-target="append">
