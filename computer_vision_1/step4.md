@@ -40,7 +40,9 @@ model.fit(X_train,y_train,epochs=100,validation_data=(X_test,y_test))
 
 </pre>
 
-Let's plot the accuracy and loss values.
+## Plotting
+
+Let's plot the accuracy and loss values over the epochs.
 
 <pre class="file" data-filename="step3.py" data-target="append">
 

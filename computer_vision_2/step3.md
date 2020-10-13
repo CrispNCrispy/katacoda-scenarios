@@ -27,7 +27,7 @@ Let's understand each of these keywords here:
 
 Each layer of neurons needs an activation function to tell them what to do. There's lots of options, but just use these for now.
 
-**`Relu`** effectively means "If X>0 return X, else return 0" -- so it lets pass values 0 or greater to the next layer in the network.
+**`Relu`** effectively means "If X>0 return X, else return 0" -- so it lets us pass values 0 or greater to the next layer in the network.
 
 **`Softmax`** gives us probability for each class that the instance is to be classified into, these add up to 1. For example, if the output from the last layer is [0.0, -1.0, 2.0, 3.0], softmax converts it into [ 0.03467109  0.01275478  0.25618663  0.69638747].
 
