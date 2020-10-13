@@ -24,11 +24,32 @@ model.evaluate(test_images, test_labels)
 
 Alternative to using the model.evaluate() method, we could have provided the test data as the 'validation_data' argument in the model.fit() method - which would output test data based metrics during the fitting.
 
-Let's run the script and check out how our model performs:
+## Plotting
+
+Let's plot the accuracy and loss values.
+
+<pre class="file" data-filename="step1.py" data-target="append">
+
+plt.plot(model.history.history['accuracy'],label='Train Accuracy')
+plt.plot(model.history.history['val_accuracy'],label='Test Accuracy')
+plt.legend()
+plt.savefig('accuracy_plot.png')
+
+plt.plot(model.history.history['loss'],label='Train Loss')
+plt.plot(model.history.history['val_loss'],label='Test Loss')
+plt.legend()
+plt.savefig('loss_plot.png')
+
+</pre>
+
+Execute the code to view the output and the plots.
 
 ```
 python step1.py
 
 ```{{execute}}
+
+Click `accuracy_plot.png`{{open}} to visualize the accuracy plot.
+Click `loss_plot.png`{{open}} to visualize the loss plot.
 
 For me, that returned a accuracy of about .8945 (89.45%) for the training set and 0.8797 (87.97%) for the test set. As expected it probably would not do as well with unseen data as it did with data it was trained on!

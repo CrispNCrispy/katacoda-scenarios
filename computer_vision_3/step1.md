@@ -20,6 +20,7 @@ Let's start with imports.
 
 <pre class="file" data-filename="step1.py" data-target="append">
 
+import matplotlib.pyplot as plt
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras.datasets import mnist

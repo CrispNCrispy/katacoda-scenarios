@@ -17,6 +17,7 @@ Let's start by importing the libraries and make sure you check the version:
 
 import tensorflow as tf
 print(tf.__version__)
+import matplotlib.pyplot as plt
 
 </pre>
 
