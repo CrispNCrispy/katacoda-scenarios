@@ -1,5 +1,38 @@
 In the last scenario, we saw how to create, train and evaluate a convolution neural network. In this scenario we will focus on addiitonal tools that are commonly used to help achieve better results, particularly - Callbacks.
 
+## Creation of a python file with functions to clean the data and create a model
+Let us create a python file which will contain the functions to clean our train/test images and create a model so that we can use it directly in the subsequent steps.
+
+```
+touch preparation.py
+```{{execute}}
+
+<pre class="file" data-filename="preparation.py" data-target="append">
+
+def create_model():
+	model = tf.keras.Sequential([
+    		tf.keras.layers.Conv2D(filters=6, kernel_size=(3, 3), activation='relu', input_shape=(32,32,1)),
+    		tf.keras.layers.AveragePooling2D(),
+    		tf.keras.layers.Conv2D(filters=16, kernel_size=(3, 3), activation='relu'),
+    		tf.keras.layers.AveragePooling2D(),
+    		tf.keras.layers.Flatten(),
+    		tf.keras.layers.Dense(units=120, activation='relu'),
+    		tf.keras.layers.Dense(units=84, activation='relu'),
+    		tf.keras.layers.Dense(units=10, activation='softmax')
+		])
+	return model
+	
+def prepare_data(images):
+	# Normalize the image pixels
+	images  = images / 255.0
+	# Add an extra dimension to the matrix
+	images = np.expand_dims(images,-1)
+	# Pad the images to get it into 32x32 size
+	images = np.pad(images, ((0,0),(2,2),(2,2),(0,0)), 'constant')
+	return images
+
+</pre>
+
 ## EarlyStopping Callback
 What happens if we run too many epochs? Chances are that the model 'overfits' on the training data, meaning that it fits 'too perfectly' on the training data that it starts performing worse on the test data. We want to avoid this. Wouldn't it be great if we could stop the training when we reach a max accuracy (or any other valuable metric).
 
@@ -13,7 +46,7 @@ touch step1.py
 
 Opening the file that we just created `step1.py`{{open}}.
 
-We will be using the same Fashion MNIST dataset. Append all the following code, which will import the libraries, clean the data for training and create the model. Don't worry about the two function we are importing, we just want to be able to quickly clean the data and obtain the model.
+We will be using the same Fashion MNIST dataset. Append all the following code, which will import the libraries, clean the data for training and create the model.
 
 <pre class="file" data-filename="step1.py" data-target="append">
 
