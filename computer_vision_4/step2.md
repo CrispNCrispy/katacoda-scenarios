@@ -13,16 +13,21 @@ model.fit(training_images, training_labels, validation_data=(test_images,test_la
 plt.plot(model.history.history['accuracy'],label='Train Accuracy')
 plt.plot(model.history.history['val_accuracy'],label='Test Accuracy')
 plt.legend()
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
 plt.savefig('accuracy_plot_1.png')
 
+plt.close()
 plt.plot(model.history.history['loss'],label='Train Loss')
 plt.plot(model.history.history['val_loss'],label='Test Loss')
 plt.legend()
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
 plt.savefig('loss_plot_1.png')
 
 </pre>
 
-Execute the code to view the output and the plots.
+Execute the code to view the output and the plots. This may take some time - so grab a cup of coffee or read something while you wait!
 
 ```
 python step1.py

@@ -7,7 +7,12 @@ Let us create a python file which will contain the functions to clean our train/
 touch preparation.py
 ```{{execute}}
 
+Opening the file that we just created `preparation.py`{{open}}.
+
 <pre class="file" data-filename="preparation.py" data-target="append">
+
+import numpy as np
+import tensorflow as tf
 
 def create_model():
 	model = tf.keras.Sequential([
@@ -75,7 +80,7 @@ Let us now define the callback to include it when we are going to fit the model.
 callback1 = tf.keras.callbacks.EarlyStopping(
                     monitor='val_accuracy',
                     mode='max', min_delta=0.001,
-                    patience = 2)
+                    patience = 5)
 
 </pre>
 

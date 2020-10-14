@@ -15,7 +15,7 @@ Opening the file that we just created `step3.py`{{open}}.
 
 We will be using the same Fashion MNIST dataset. Append all the following code, which will import the libraries, clean the data for training and create the model. Don't worry about the two function we are importing, we just want to be able to quickly clean the data and obtain the model.
 
-<pre class="file" data-filename="step1.py" data-target="append">
+<pre class="file" data-filename="step3.py" data-target="append">
 
 import tensorflow as tf
 
