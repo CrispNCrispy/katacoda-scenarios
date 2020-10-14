@@ -73,6 +73,12 @@ print(model.summary())
 
 </pre>
 
+Execute the code to see the model summary.
+
+```
+touch step1.py
+```{{execute}}
+
 Let us now define the callback to include it when we are going to fit the model.
 
 <pre class="file" data-filename="step1.py" data-target="append">

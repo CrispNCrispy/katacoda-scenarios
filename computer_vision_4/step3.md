@@ -18,12 +18,10 @@ We will be using the same Fashion MNIST dataset. Append all the following code, 
 <pre class="file" data-filename="step3.py" data-target="append">
 
 import tensorflow as tf
+import matplotlib.pyplot as plt
 
-# Function to clean up the data
-from preprocess_data import prepare_data
-
-#Function to create the model
-from model import create_model
+# Function to clean up the data and create the model
+from preparation import prepare_data, create_model
 
 mnist = tf.keras.datasets.fashion_mnist
 (training_images, training_labels), (test_images, test_labels) = mnist.load_data()
@@ -39,7 +37,7 @@ print(model.summary())
 
 Let us now define the callback to include it when we are going to fit the model.
 
-<pre class="file" data-filename="step1.py" data-target="append">
+<pre class="file" data-filename="step3.py" data-target="append">
 
 # Scheduler function that reduces the learning rate by a factor of e^-0.1.
 def scheduler(epoch, lr):
@@ -48,7 +46,7 @@ def scheduler(epoch, lr):
     else:
         return lr * tf.math.exp(-0.1)
 
-callback2 = tf.keras.callbacks.LearningRateScheduler(scheduler=scheduler,verbose=1)
+callback2 = tf.keras.callbacks.LearningRateScheduler(schedule=scheduler,verbose=1)
 
 </pre>
 
