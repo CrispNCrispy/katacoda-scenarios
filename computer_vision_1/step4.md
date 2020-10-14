@@ -48,11 +48,16 @@ Let's plot the accuracy and loss values over the epochs.
 
 plt.plot(model.history.history['accuracy'],label='Train Accuracy')
 plt.plot(model.history.history['val_accuracy'],label='Test Accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
 plt.legend()
 plt.savefig('accuracy_plot.png')
 
+plt.close()
 plt.plot(model.history.history['loss'],label='Train Loss')
 plt.plot(model.history.history['val_loss'],label='Test Loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
 plt.legend()
 plt.savefig('loss_plot.png')
 
@@ -70,3 +75,5 @@ Click `loss_plot.png`{{open}} to visualize the loss plot.
 
 * We can clearly see the accuracy improving and loss decreasing - exactly what we expected. 
 * The number of Dense units and the activation function in the hidden layer is something that could be changed to obtain better results. We could also add more hidden layers and change the optimizer (or change the learning rate of the optimizer). There is a lot of trial and error that happens when we train a neural network.
+
+In the next scenario, we'll be putting all of what we learnt to classify image data!

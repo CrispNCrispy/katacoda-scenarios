@@ -51,7 +51,9 @@ Let's now try to predict the price for an eight bedroom house and obtain the wei
 <pre class="file" data-filename="step1.py" data-target="append">
 
 print("Price of the 8-bedroom house is: ", model.predict([10.0]))
-print(model.weights)
+
+print('Kernel value:', model.weights[0].numpy()[0,0])
+print('Bias value:', model.weights[1].numpy()[0])
 
 </pre>
 
@@ -62,4 +64,6 @@ python step1.py
 
 ```{{execute}}
 
-Notice the values of the weights (the kernel is the weight associated with the number of bedrroms and the bias is the constant) and how it is very close to 50! This was a small synthetic dataset in which we used the smallest possible neural network. In the next step let's use a real dataset to solve a classification problem.
+Notice the values of the weights (the kernel is the weight associated with the number of bedrroms and the bias is the constant) and how it is very close to 50! 
+
+This was a small synthetic dataset in which we used the smallest possible neural network. In the next step let's use a real dataset to solve a classification problem.

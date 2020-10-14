@@ -11,11 +11,16 @@ model.fit(training_images, training_labels, validation_data=(test_images,test_la
 plt.plot(model.history.history['accuracy'],label='Train Accuracy')
 plt.plot(model.history.history['val_accuracy'],label='Test Accuracy')
 plt.legend()
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
 plt.savefig('accuracy_plot_2.png')
 
+plt.close()
 plt.plot(model.history.history['loss'],label='Train Loss')
 plt.plot(model.history.history['val_loss'],label='Test Loss')
 plt.legend()
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
 plt.savefig('loss_plot_2.png')
 
 </pre>

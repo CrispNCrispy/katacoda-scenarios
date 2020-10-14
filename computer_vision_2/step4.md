@@ -20,11 +20,16 @@ Let's plot the accuracy and loss values.
 
 plt.plot(model.history.history['accuracy'],label='Train Accuracy')
 plt.plot(model.history.history['val_accuracy'],label='Test Accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
 plt.legend()
 plt.savefig('accuracy_plot.png')
 
+plt.close()
 plt.plot(model.history.history['loss'],label='Train Loss')
 plt.plot(model.history.history['val_loss'],label='Test Loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
 plt.legend()
 plt.savefig('loss_plot.png')
 
