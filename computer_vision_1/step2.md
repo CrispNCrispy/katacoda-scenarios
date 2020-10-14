@@ -1,4 +1,4 @@
-  
+<br>
 ## Model Creation 
 Now, we will create the simplest possible neural network with only 1 layer (output layer), and that layer has 1 neuron/node, and the input shape to it is just 1 value (1 feature).
 
