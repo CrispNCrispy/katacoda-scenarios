@@ -4,7 +4,11 @@
   "difficulty": "Beginner",
   "time": "15 minutes",
   "details": {
-    "assets": { "host01": [ {"file": "*", "target": "/root"} ] },
+    "assets": {
+        "host01": [
+            {"file": "preparation.py", "target": "~/", "chmod": "+x"}
+        ]
+    },
     "steps": [
       {
         "title": "EarlyStopping Callback (1/2)",
