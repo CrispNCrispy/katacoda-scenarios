@@ -28,7 +28,7 @@ plt.savefig('loss_plot_2.png')
 
 </pre>
 
-Execute the code to view the output and the plots. Look at the `model.fit()` outputs and how the learning rate decreases based on the scheduler function.
+Execute the code to view the output and the plots. Look at the `model.fit()` outputs and how the learning rate decreases based on the scheduler function. The fittin may take some time.
 
 ```
 python step3.py
