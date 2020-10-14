@@ -1,7 +1,7 @@
 In the last scenario, we saw how to create, train and evaluate a convolution neural network. In this scenario we will focus on addiitonal tools that are commonly used to help achieve better results, particularly - Callbacks.
 
 ## EarlyStopping Callback
-What happens if we run too many epochs? Chances are that the model 'overfits' on the training data, meaning that it fits 'too perfectly' on the training data that it starts performing worse on the test data. We want to avoid this. Wouldn't it be great if we could stop the training when we reach a max accuracy(or any other valuable metric).
+What happens if we run too many epochs? Chances are that the model 'overfits' on the training data, meaning that it fits 'too perfectly' on the training data that it starts performing worse on the test data. We want to avoid this. Wouldn't it be great if we could stop the training when we reach a max accuracy (or any other valuable metric).
 
 For example, if we are monitoring accuracy, we should be able to stop the training if our model's accuracy has stopped improving in `n` consecutive epochs. Luckily, we can do that using the Early Stopping Callback!
 
@@ -20,11 +20,8 @@ We will be using the same Fashion MNIST dataset. Append all the following code, 
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
-# Function to clean up the data
-from preprocess_data import prepare_data
-
-#Function to create the model
-from model import create_model
+# Function to clean up the data and create the model
+from preparation import prepare_data, create_model
 
 mnist = tf.keras.datasets.fashion_mnist
 (training_images, training_labels), (test_images, test_labels) = mnist.load_data()

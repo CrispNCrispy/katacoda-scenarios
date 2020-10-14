@@ -53,7 +53,7 @@ callback2 = tf.keras.callbacks.LearningRateScheduler(scheduler=scheduler,verbose
 </pre>
 
 Arguments:
-`scheduler`: A function that takes an epoch index (integer, indexed from 0) and current learning rate (float) as inputs and returns a new learning rate as output (float).
-`verbose`: int. 0: quiet, 1: update messages.
+* `scheduler`: A function that takes an epoch index (integer, indexed from 0) and current learning rate (float) as inputs and returns a new learning rate as output (float).
+* `verbose`: int. 0: quiet, 1: update messages.
 
 With our callback defined, we will now move on to compiling and fitting our model.

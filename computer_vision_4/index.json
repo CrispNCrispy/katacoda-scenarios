@@ -6,7 +6,10 @@
   "details": {
     "assets":{
       "client": [
-        {"file": "preprocess_data.py", "target": "~/"}
+        {
+          "file": "preparation.py",
+          "target": "~/"
+        }
       ]
     },
     "steps": [
@@ -19,11 +22,11 @@
         "text": "step2.md"
       },
       {
-        "title": "LeanringRateScheduler Callback (1/2)",
+        "title": "LearningRateScheduler Callback (1/2)",
         "text": "step3.md"
       },
       {
-        "title": "LeanringRateScheduler Callback (2/2)",
+        "title": "LearningRateScheduler Callback (2/2)",
         "text": "step4.md"
       }
     ],

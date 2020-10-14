@@ -1,4 +1,5 @@
-### Compiling, Fitting and Plotting the model
+<br>
+## Compiling, Fitting and Plotting the model
 Let's now compile, fit the model and plot it to view what happened. We add the callback in the `model.fit` method
 
 <pre class="file" data-filename="step1.py" data-target="append">
