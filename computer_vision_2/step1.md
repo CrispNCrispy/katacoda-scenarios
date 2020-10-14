@@ -11,12 +11,11 @@ touch step1.py
 
 Opening the file that we just created `step1.py`{{open}}.
 
-Let's start by importing the libraries and make sure you check the version:
+Let's start by importing the libraries:
 
 <pre class="file" data-filename="step1.py" data-target="append">
 
 import tensorflow as tf
-print(tf.__version__)
 import matplotlib.pyplot as plt
 
 </pre>

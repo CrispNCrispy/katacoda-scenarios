@@ -1,3 +1,4 @@
+<br>
 ## Data Normalization
 A common (and necessary) practice is to normalize our pixel values by dividing it by 255 to get it in the 0-1 range. This helps our optimizer achieve minimization faster.
 
@@ -5,12 +6,19 @@ Open the same fle to continue: `step1.py`{{open}}.
 
 <pre class="file" data-filename="step1.py" data-target="append">
 
-print("Pixel values BEFORE normalization: ", train_images[0])
+print("Few pixel values BEFORE normalization: ", train_images[0,0:60,0:60])
 train_images  = train_images / 255.0
 test_images = test_images / 255.0
-print("Pixel values AFTER normalization: ", train_images[0])
+print("\nFew pixel values AFTER normalization: ", train_images[0,0:60,0:60])
 
 </pre>
+
+Let's run the script to view some of the pixel values:
+
+```
+python step1.py
+
+```{{execute}}
 
 ## Dimension Expansion
 As mentioned in the last step, we need to change our images matrix to (size, 28, 28, 1) instead of (size, 28, 28). To do this, we will use the `np.expand_dims()` function.

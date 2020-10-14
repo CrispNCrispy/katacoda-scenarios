@@ -1,7 +1,8 @@
+<br>
 ## Train the model by invoking the `fit()` method.
 It's time to train the model. We will be using the batch_size argument, meaning that we will be fitting on 16 images at a time - as we don't want to flood our memory. The training may take some time.
 
-Open the same .py file: `step1`{{open}}
+Open the same .py file: `step1.py`{{open}}
 
 <pre class="file" data-filename="step1.py" data-target="append">
 
@@ -42,14 +43,14 @@ model.evaluate(test_images, test_labels)
 
 </pre>
 
-Execute the code to view the output and the plots.
+Execute the code to view the output and the plots (the fitting may take a little time).
 
 ```
 python step1.py
 
 ```{{execute}}
 
-Click `accuracy_plot.png`{{open}} to visualize the accuracy plot.
-Click `loss_plot.png`{{open}} to visualize the loss plot.
+* Click `accuracy_plot.png`{{open}} to visualize the accuracy plot. The accuracy of both the train and test set is increasing - as expected.
+* Click `loss_plot.png`{{open}} to visualize the loss plot. The loss of both the train and test set is decreasing - as expected.
 
 Wow, I received a training accuracy of 0.9919 (99.19%) and a test accuracy of 0.9873 (98.73%)! That is a massive improvement, and we even reduced the number of parameters to learn!

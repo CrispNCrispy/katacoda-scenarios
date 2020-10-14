@@ -1,6 +1,5 @@
 <br>
 ## Train the model by invoking the `fit()` method.
-
 Open the same .py file: `step1.py`{{open}}
 
 <pre class="file" data-filename="step1.py" data-target="append">
@@ -9,12 +8,7 @@ model.fit(train_images, train_labels, epochs=5, validation_data=(test_images,tes
 
 </pre>
 
-Once it's done training -- you should see an accuracy value at the end of the final epoch. It might look something like 0.9098. This tells you that your neural network is about 91% accurate in classifying the training data.
-
-You should try to see if you can improve the performance by changing the number of epochs.
-
 ## Plotting
-
 Let's plot the accuracy and loss values.
 
 <pre class="file" data-filename="step1.py" data-target="append">
@@ -51,6 +45,10 @@ Execute the code to view the output and the plots.
 python step1.py
 
 ```{{execute}}
+
+Once it's done training -- you should see an accuracy value at the end of the final epoch. It might look something like 0.9098. This tells you that your neural network is about 91% accurate in classifying the training data. You will also be able to see the test set accuracy.
+
+You should try to see if you can improve the performance by changing the number of epochs or any other hyperparamters such as the optimizer, the optimizer's learning rate, etc.
 
 * Click `accuracy_plot.png`{{open}} to visualize the accuracy plot. Both the train and test accuracy are increasing - as expected.  
 * Click `loss_plot.png`{{open}} to visualize the loss plot. Both the train and test loss are decreasing - as expected.

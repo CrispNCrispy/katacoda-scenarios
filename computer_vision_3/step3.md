@@ -27,6 +27,11 @@ print(model.summary())
 
 </pre>
 
+In a Conv2D layer, there are 3 important arguments:
+* filters - It is the dimenionality of the output space. In the CNN image in step 1, notice that the initial image which has a filter size of 3 reduces in length and breadth, but it's width increases. This width increase is due to a common practice of increasing the filter. Each filter captures some key features of the image, such as horizontal and vertical lines.
+* kernel_size - This specifies the height and width of the convolution window - each window performs several computations on the image. It commonly takes an odd integer pair of values.
+* strides - This specifies the stride of the convolution window. The default value is (1,1).
+
 Execute the code to see the model summary.
 
 ```

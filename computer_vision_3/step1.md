@@ -3,7 +3,7 @@ So far we have been working with the Dense layer for classifying images. But in 
 When many pairs of these layers are followed by a flatten layer and then a few dense layers, it's commonly called a **Convolution Neural Network (CNN)**. Convolutional neural networks are a kind of feed-forward neural network whose artificial neurons can respond to a part of the surrounding cells in the coverage range - something a dense layer cannot achieve by itself.
 
 Check out the image of a CNN:  
-[Image](https://miro.medium.com/max/1100/1*vkQ0hXDaQv57sALXAJquxA.jpeg)
+![](https://miro.medium.com/max/1100/1*vkQ0hXDaQv57sALXAJquxA.jpeg)
 
 In this scenario, we will replicate the [LeNet-5](http://yann.lecun.com/exdb/lenet/) convolution nerural network architecure proposed by Yann LeCun et al. in 1998. Since then, we have had much larger and varying types of convolution neural networks, but let's implement this simple architecture and compare its accuracy to our earlier simple dense neural network.
 

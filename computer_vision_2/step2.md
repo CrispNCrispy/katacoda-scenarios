@@ -1,3 +1,4 @@
+<br>
 ## In-built split of the dataset
 Calling the `load_data` method on the `mnist` object will give you two sets of two lists, these will be the training and testing values for the graphics that contain the clothing items and their labels.
 
