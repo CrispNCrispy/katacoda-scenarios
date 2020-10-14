@@ -1,6 +1,6 @@
 {
   "title": "Computer Vision with TensorFlow 2.x - Part 1",
-  "description": "Learning how to use neural networks to solve regression and classification problems",
+  "description": "Learning how to use neural networks to solve a regression and classification problem using TensorFlow 2.x.",
   "difficulty": "Beginner",
   "time": "15 minutes",
   "details": {

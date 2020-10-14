@@ -13,14 +13,14 @@ All the pixels are basically values in the range 0 to 255. If we are training a 
 
 <pre class="file" data-filename="step1.py" data-target="append">
 
-print("Pixel values BEFORE normalization: ", train_images[0])
+print("Few pixel values BEFORE normalization: ", train_images[0,0:60,0:60])
 train_images  = train_images / 255.0
 test_images = test_images / 255.0
-print("Pixel values AFTER normalization: ", train_images[0])
+print("\nFew pixel values AFTER normalization: ", train_images[0,0:60,0:60])
 
 </pre>
 
-Let's run the script:
+Let's run the script to view some of the pixel values:
 
 ```
 python step1.py

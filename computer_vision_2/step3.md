@@ -1,7 +1,8 @@
-
+<br>
+## Creating the model
 With our training and testing datasets normalized, we are ready to design our model. 
 
-Open the same .py file: `step1`{{open}}
+Open the same .py file: `step1.py`{{open}}
 
 For this model, we'll be using a bunch of layers. Let us also output the summary of the model.
 
@@ -14,6 +15,13 @@ model = tf.keras.models.Sequential([tf.keras.layers.Flatten(input_shape=(28,28))
 print(model.summary())
 
 </pre>
+
+Let's run the script to view the model summary:
+
+```
+python step1.py
+
+```{{execute}}
 
 The model is learning over 200k parameters! You can try changing the number of units in the hidden layer (first Dense layer) to see how the number of parameters change. Obviously, the more complex the model, the longer it takes to train.
 
@@ -32,7 +40,7 @@ Each layer of neurons needs an activation function to tell them what to do. Ther
 **`Softmax`** gives us probability for each class that the instance is to be classified into, these add up to 1. For example, if the output from the last layer is [0.0, -1.0, 2.0, 3.0], softmax converts it into [ 0.03467109  0.01275478  0.25618663  0.69638747].
 
 
-### Compile the Model with optimizer, loss, and metrics.
+## Compile the Model with an optimizer, loss and metric.
 The next thing to do, now the model is defined, is to actually build it. We do this by compiling it with an optimizer and loss function.
 
 <pre class="file" data-filename="step1.py" data-target="append">
@@ -43,4 +51,4 @@ model.compile(optimizer = tf.keras.optimizers.Adam(),
 
 </pre>
 
-We are using one of the most popular optimizers - the Adam optimizer. Since it is a classification problem with labels not in a one-hot encoded format, we use a sparse categorical entropy loss.
+We are using one of the most popular optimizers - the Adam optimizer. Since it is a classification problem with labels not in a one-hot encoded format, we use a `sparse` categorical entropy loss.

@@ -1,8 +1,8 @@
 In this, we will repeat what we did, but with a few major changes:
-* Bigger Neural Network - We will now add one hidden layer with multiple nodes.
-* Classification Problem - In the previous step, we implemented a regression problem involving a continuous target value. In a classification problem, the target values are discrete finite values such as 0, 1 and 2 or with values in a one-hot encoded format where 0, 1 and 2 could be respresented as [1, 0, 0], [0, 1, 0] and [0, 0, 1] respectively.
-* Real Dataset - We will be working with the famous `Iris Dataset` instead of creating our own dataset. The dataset contains 3 classes of 50 instances each, where each class refers to a type of iris plant. Each instance also has 4 features this time - sepal length, sepal width, petal length and petal width. In our previous step, we just used one feature - number of bedrooms.
-* Splitting our dataset into two parts - a `train dataset` and a `test dataset`. We will be reserving 80% of the data for training on the `model.fit()` method and 20% will be used to test the accuracy of the model. The reason we do this is because we want to test the model on data it has not trained on (or not seen), so as to avoid this `bias` on the train data.
+* **Bigger Neural Network** - We will now add one hidden layer with multiple nodes.
+* **Classification Problem** - In the previous step, we implemented a regression problem involving a continuous target value. In a classification problem, the target values are discrete finite values such as 0, 1 and 2 or with values in a one-hot encoded format where 0, 1 and 2 could be respresented as [1, 0, 0], [0, 1, 0] and [0, 0, 1] respectively.
+* **Real Dataset** - We will be working with the famous `Iris Dataset` instead of creating our own dataset. The dataset contains 3 classes of 50 instances each, where each class refers to a type of iris plant. Each instance also has 4 features this time - sepal length, sepal width, petal length and petal width. In our previous step, we just used one feature - number of bedrooms.
+* **Splitting our dataset into two parts** - a `train dataset` and a `test dataset`. We will be reserving 80% of the data for training on the `model.fit()` method and 20% will be used to test the accuracy of the model. The reason we do this is because we want to test the model on data it has not trained on (or not seen), so as to avoid this `bias` on the train data.
 
 Create a new file where our code will reside:
 

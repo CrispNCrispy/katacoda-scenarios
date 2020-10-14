@@ -1,6 +1,7 @@
+<br>
 ## Train the model by invoking the `fit()` method.
 
-Open the same .py file: `step1`{{open}}
+Open the same .py file: `step1.py`{{open}}
 
 <pre class="file" data-filename="step1.py" data-target="append">
 
@@ -51,7 +52,7 @@ python step1.py
 
 ```{{execute}}
 
-Click `accuracy_plot.png`{{open}} to visualize the accuracy plot.
-Click `loss_plot.png`{{open}} to visualize the loss plot.
+* Click `accuracy_plot.png`{{open}} to visualize the accuracy plot. Both the train and test accuracy are increasing - as expected.  
+* Click `loss_plot.png`{{open}} to visualize the loss plot. Both the train and test loss are decreasing - as expected.
 
 For me, that returned a accuracy of about .8945 (89.45%) for the training set and 0.8797 (87.97%) for the test set. As expected it probably would not do as well with unseen data as it did with data it was trained on!
