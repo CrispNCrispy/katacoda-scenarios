@@ -28,7 +28,7 @@ python step1.py
 
 ```{{execute}}
 
-Click `accuracy_plot_1.png`{{open}} to visualize the accuracy plot.
-Click `loss_plot_1.png`{{open}} to visualize the loss plot.
+* Click `accuracy_plot_1.png`{{open}} to visualize the accuracy plot.
+* Click `loss_plot_1.png`{{open}} to visualize the loss plot.
 
 You can see that as the model's accuracy started to decrease after reaching the maximum, the EarlyStopping callback allowed the model to stop at that point.

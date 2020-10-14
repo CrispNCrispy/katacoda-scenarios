@@ -6,8 +6,7 @@
   "details": {
     "assets":{
       "client": [
-        {"file": "preprocess_data.py", "target": "~/"},
-        {"file": "model.py", "target": "~/"}
+        {"file": "preprocess_data.py", "target": "~/"}
       ]
     },
     "steps": [

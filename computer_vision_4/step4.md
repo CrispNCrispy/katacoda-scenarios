@@ -32,5 +32,5 @@ python step3.py
 
 ```{{execute}}
 
-Click `accuracy_plot_2.png`{{open}} to visualize the accuracy plot.
-Click `loss_plot_2.png`{{open}} to visualize the loss plot.
+* Click `accuracy_plot_2.png`{{open}} to visualize the accuracy plot.
+* Click `loss_plot_2.png`{{open}} to visualize the loss plot.
