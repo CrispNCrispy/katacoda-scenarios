@@ -52,16 +52,29 @@ python step3.py
 
 ```{{execute}}
 
-The data is already preprocessed, so we do not have to do anything to prepare it and can use it directly. Also we don't really need to care about which column represents what feature - we'll let the model figure out the patterns as only the final target prediction is of relevance to us.
+The data is already preprocessed, so we do not have to do anything to prepare it and can use it directly. Also, we don't really need to care about which column represents what feature - we'll let the model figure out the patterns as only the final target prediction is of relevance to us.
 
 ## Splitting the dataset
-Let's split our dataset into the training and testing datasets. 
+Let's split our dataset into the training and testing datasets and view their shapes to confirm.
 
 <pre class="file" data-filename="step3.py" data-target="append">
 
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test  = train_test_split(X,y,test_size=0.2)
 
+# Let's view the shapes of all train and test data.
+print('Shape of training data:', X_train.shape)
+print('Shape of training targets:', y_train.shape)
+print('Shape of test data:', X_test.shape)
+print('Shape of test targets:', y_test.shape)
+
 </pre>
 
-With our data ready, let's work on our model.
+Execute the code to observe the shapes.
+
+```
+python step3.py
+
+```{{execute}}
+
+You can observe that a split of 80-20 (20% for the test set) did indeed takes place! With our data ready, let's work on our model.

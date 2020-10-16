@@ -17,7 +17,19 @@ model = keras.models.Sequential([
     keras.layers.Dense(units=3, activation='softmax')
 ])
 
+# View the model summary
+print(model.summary())
+
 </pre>
+
+Let's execute the code to view the summary of the model we are creating.
+
+```
+python step3.py
+
+```{{execute}}
+
+Notice the number of parameters for each layer. These are the `weights` or the `unknowns` that the model attempts to find through `Backpropagation` - an algorithm that is used to compute the gradients of a neural network to reach a point of minimization of the cost function (or loss function) such as the `mean squared error (MSE)` that we used in Step 2, or the loss function we are going to use in the very next code block.
 
 ## Compiling the model
 * We are going to use the RMSProp optimizer.
@@ -42,7 +54,7 @@ model.fit(X_train,y_train,epochs=100,validation_data=(X_test,y_test))
 
 ## Plotting
 
-Let's plot the accuracy and loss values over the epochs.
+Let's also add the code block to plot the accuracy and loss values over the epochs.
 
 <pre class="file" data-filename="step3.py" data-target="append">
 
