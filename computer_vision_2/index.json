@@ -4,11 +4,6 @@
   "difficulty": "Beginner",
   "time": "15 minutes",
   "details": {
-    "assets":{
-      "client": [
-        {"file": "dataset.png", "target": "~/"}
-      ]
-    },
     "steps": [
       {
         "title": "Loading the dataset",
