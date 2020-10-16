@@ -14,10 +14,10 @@ All the pixels are basically values in the range 0 to 255. If we are training a 
 
 <pre class="file" data-filename="step1.py" data-target="append">
 
-print("Few pixel values BEFORE normalization: ", train_images[0,0:60,0:60])
+print("Few pixel values BEFORE normalization: \n", train_images[0,20:30,20:30])
 train_images  = train_images / 255.0
 test_images = test_images / 255.0
-print("\nFew pixel values AFTER normalization: ", train_images[0,0:60,0:60])
+print("\nFew pixel values AFTER normalization: \n", train_images[0,20:30,20:30])
 
 </pre>
 
@@ -27,5 +27,7 @@ Let's run the script to view some of the pixel values:
 python step1.py
 
 ```{{execute}}
+
+Notice that the pixel values went from the range of 0-255 to 0-1. This simple `Feature Scaling` is not the only way of normalization, but this simple way of dividing by 255 is very common for image pixels.
 
 Normalization is a key step in any machine learning problem. We would like all values to be within the same small range in order for the optimizer to work more efficiently.

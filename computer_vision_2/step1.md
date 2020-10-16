@@ -24,9 +24,7 @@ We will train a neural network to recognize items of clothing from a common data
 
 It contains 70,000 items of clothing in 10 different categories. Each item of clothing is in a 28x28 greyscale image. You can see some examples [here](https://github.com/zalandoresearch/fashion-mnist):
 
-<img src="/orm-harshit-tyagi/scenarios/computer_vision_1/assets/dataset.png" alt="Dataset">
-
-![](/harshit-tyagi/computer_vision_1/assets/dataset.png)
+![](~/dataset.png)
 
 This dataset is also available in the keras datasets API, let's load it:
 

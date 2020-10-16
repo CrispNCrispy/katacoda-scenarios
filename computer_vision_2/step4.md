@@ -46,11 +46,14 @@ python step1.py
 
 ```{{execute}}
 
-Once it's done training -- you should see an accuracy value at the end of the final epoch. It might look something like 0.9098. This tells you that your neural network is about 91% accurate in classifying the training data. You will also be able to see the test set accuracy.
+Once it's done training -- you should see an accuracy value at the end of the final epoch. It might look something like 0.9098 (the exact value will differ with different runs). This tells you that your neural network is about 91% accurate in classifying the training data. You will also be able to see the test set accuracy.
 
 You should try to see if you can improve the performance by changing the number of epochs or any other hyperparamters such as the optimizer, the optimizer's learning rate, etc.
 
 * Click `accuracy_plot.png`{{open}} to visualize the accuracy plot. Both the train and test accuracy are increasing - as expected.  
 * Click `loss_plot.png`{{open}} to visualize the loss plot. Both the train and test loss are decreasing - as expected.
 
-For me, that returned a accuracy of about .8945 (89.45%) for the training set and 0.8797 (87.97%) for the test set. As expected it probably would not do as well with unseen data as it did with data it was trained on!
+For me, that returned a accuracy of about .8945 (89.45%) for the training set and 0.8797 (87.97%) for the test set. You can expect something similar. The reason it differs with different runs is because the weights of Dense layers are initialized randomly. One way to initialize it with the same values all the time (in case if you are curious) is to use the seed argument to any int value when using the initializer argument in a layer.   
+For example, `tf.keras.layers.Dense(256, activation=tf.nn.relu, initializer=tf.keras.initializers.GlorotUniform(seed=5))`. GlorotUniform is the default initializer for the dense layer.
+
+As expected it probably would not do as well with unseen data as it did with data it was trained on!

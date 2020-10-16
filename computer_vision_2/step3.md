@@ -23,7 +23,7 @@ python step1.py
 
 ```{{execute}}
 
-The model is learning over 200k parameters! You can try changing the number of units in the hidden layer (first Dense layer) to see how the number of parameters change. Obviously, the more complex the model, the longer it takes to train.
+The model is learning over 200k parameters! You can try changing the number of units in the hidden layer (first Dense layer) to see how the number of parameters change. The more complex the model, the longer it takes to train.
 
 Let's understand each of these keywords here:
 
