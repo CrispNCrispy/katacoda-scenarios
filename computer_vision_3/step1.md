@@ -47,6 +47,6 @@ python step1.py
 
 We can see that there are 60,000 images in the training set and 10,000 images in the test set. But there are 2 problems. 
 * The first is that a convolution layer expects images in the shape (size, row, width, filters) but ours is just (size, row, width). Since the images are black and white, it represents just 1 filter (in contrast to RGB images, which have 3 filters), but we still need to convert it to a form that can be processed - by increasing the image shape by one dimension.
-* The second is that LeNet-5 expects images of size 32x32, but our images are of size 28x28. Two ways we can correct this is to either convert the image into the target size through methods involving stretching of the image or, by padding the images. Padding refers to just adding extra rows and columns that have no meaning - using a value of 0. We shall use the latter method.
+* The second is that LeNet-5 expects images of size 32x32 as in the [original paper](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf), but our images are of size 28x28. We could create a model with the input size as 28x28 but let's stick with the original model. Two ways we can adapt to this is to either convert the image into the target size through methods involving stretching of the image or, by padding the images. Padding refers to just adding extra rows and columns that have no meaning - using a value of 0. We shall use the latter method.
 
 We will also have to normalize our pixel values.
