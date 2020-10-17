@@ -4,8 +4,6 @@ Bollinger Bands are composed of three lines. One of the more common calculations
 
 <img src="/orm-harshit-tyagi/scenarios/intermediate_quant_trading_4/assets/bollinger_bands.png" alt="Dataset">
 
-![](/harshit-tyagi/intermediate_quant_trading_4/assets/bollinger_bands.png)
-
 If the price is near the upper Bollinger Band, it’s considered “expensive” because it is 2 standard deviation above the average (the 20-period moving average).
 
 And if the is price near the lower Bollinger Band, it’s considered “cheap” because it’s 2 standard deviation below the average.

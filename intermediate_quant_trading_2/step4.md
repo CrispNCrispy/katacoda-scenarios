@@ -2,9 +2,9 @@ For this step, we are going to add another 2 elements:
 * Commission 
 * Profit on every buy/sell cycle
 
-To add commission charges, one single line will suffice: cerebro.broker.setcommission(commission=x)
+To add commission charges, one single line will suffice: `cerebro.broker.setcommission(commission=x)`
 
-For obtaining profit on every cycle, we introduce another function called 'notify_trade' which gets called on every execution, but we will use it to output profit whenever a trade has closed (or sold).
+For obtaining profit on every cycle, we introduce another function called `notify_trade` which gets called on every execution, but we will use it to output profit whenever a trade has closed (or sold).
 
 Create a .py file.
 

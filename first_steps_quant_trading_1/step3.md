@@ -59,3 +59,5 @@ We have the same Apple stock prices for the same time period with same columns(f
 python step3.py
 
 ```{{execute}}
+
+Note: Incase if an error arises with `pdr.DataReader` due to the `api_key` argument, please create an account on quandl to obtain your own personal API key.
