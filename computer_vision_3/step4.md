@@ -53,4 +53,4 @@ python step1.py
 * Click `accuracy_plot.png`{{open}} to visualize the accuracy plot. The accuracy of both the train and test set is increasing - as expected.
 * Click `loss_plot.png`{{open}} to visualize the loss plot. The loss of both the train and test set is decreasing - as expected.
 
-Wow, I received a training accuracy of 0.9919 (99.19%) and a test accuracy of 0.9873 (98.73%)! That is a massive improvement, and we even reduced the number of parameters to learn!
+Wow, I received a training accuracy of 0.9919 (99.19%) and a test accuracy of 0.9873 (98.73%)! You can expect something similar (the exact value will differ with different runs). The reason it differs with different runs is because the weights of the layers are initialized randomly. In any case, that is a massive improvement compared to our pure Dense model, and we even reduced the number of parameters to learn!
