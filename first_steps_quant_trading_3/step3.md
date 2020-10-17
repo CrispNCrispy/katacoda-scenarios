@@ -7,8 +7,6 @@ We use the `ewm()` method cascaded with the `mean()` function similar to how we 
 
 <img src="/orm-harshit-tyagi/scenarios/first_steps_quant_trading_3/assets/ewma.png" alt="Dataset">
 
-![](/harshit-tyagi/first_steps_quant_trading_3/assets/ewma.png)
-
 Let's add the code to compute and plot it.
 
 <pre class="file" data-filename="step2.py" data-target="append">

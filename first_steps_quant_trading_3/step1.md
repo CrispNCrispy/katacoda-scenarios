@@ -19,8 +19,6 @@ The EMA for a series Y may be calculated recursively:
 
 <img src="/orm-harshit-tyagi/scenarios/first_steps_quant_trading_3/assets/ewma.png" alt="Dataset">
 
-![](/harshit-tyagi/first_steps_quant_trading_3/assets/ewma.png)
-
 Where:
 
 The coefficient α represents the degree of weighting decrease, a constant smoothing factor between 0 and 1. A higher α discounts older observations faster.

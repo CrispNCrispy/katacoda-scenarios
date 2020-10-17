@@ -10,13 +10,9 @@ Following are the common types of returns:
 
 <img src="/orm-harshit-tyagi/scenarios/first_steps_quant_trading_2/assets/simple_return.png" alt="Dataset">
 
-![](/harshit-tyagi/first_steps_quant_trading_2/assets/simple_return.png)
-
 
 2. **Log Return**: For a given month, it is the sum of the log returns of the days within that month. These are defined as:
 
 <img src="/orm-harshit-tyagi/scenarios/first_steps_quant_trading_2/assets/log_return.png" alt="Dataset">
-
-![](/harshit-tyagi/first_steps_quant_trading_2/assets/log_return.png)
 
 In the next few steps we shall be using certain functions to obtain both these return vales using the data we already have. It is interesting how we can easily obtain each return value with a single line of code!

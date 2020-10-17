@@ -64,5 +64,5 @@ python step2.py
 
 ```{{execute}}
 
-Click `moving_avg.png`{{open}} to visualize the plot of simple moving average for 40 days vs. simple moving average for 252 days vs. adjusted closing prices
-Click `cumulative_moving_avg.png`{{open}} to visualize cumulative moving average vs. the adjusted closing price.
+* Click `moving_avg.png`{{open}} to visualize the plot of simple moving average for 40 days vs. simple moving average for 252 days vs. adjusted closing prices.
+* Click `cumulative_moving_avg.png`{{open}} to visualize cumulative moving average vs. the adjusted closing price.

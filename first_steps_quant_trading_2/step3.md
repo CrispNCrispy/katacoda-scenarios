@@ -2,8 +2,6 @@ We will now calculate the simple daily cumulative returns using the simple retur
 
 <img src="/orm-harshit-tyagi/scenarios/first_steps_quant_trading_2/assets/cumulative_return.png" alt="Dataset">
 
-![](/harshit-tyagi/first_steps_quant_trading_2/assets/cumulative_return.png)
-
 We will continue to use previous python script, step2.py.
 
 Open `step2.py`{{open}}  in the editor.

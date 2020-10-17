@@ -38,7 +38,7 @@ print(df.head())
 
 These lines would essentially create two new columns in our dataframe, `simple_return` and `log_return`.
 
-Now run the script. Notice the two new created columns at the very end of the dataframe. Also notice the `NA` values in the first row. This happens because the there is no row before the first row to compute a return from.
+Now run the script. Notice the two new created columns at the very end of the dataframe. Also notice the `NaN` values in the first row. This happens because the there is no row before the first row to compute a return from.
 
 Let's now run step2.py.
 

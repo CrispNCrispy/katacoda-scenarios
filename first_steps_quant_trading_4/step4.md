@@ -1,8 +1,8 @@
 We will now be putting together our second strategy!
 
-Create a signal in an `sma_signal` column when the short moving average crosses the long moving average, but only for the period greater than the shortest moving average window. We will need to use 'np.where()' function to compare all the rows after the (short_window)th index row. Hence, we use iloc inside the 'np.where()' function. If true (i.e., short MA value is more than long MA value), the initialized value 0.0 in the signal column will be overwitten with 1.0. A “signal” is created! If the condition is false, the original value of 0.0 will be kept and no signal is generated.
+Create a signal in an `sma_signal` column when the short moving average crosses the long moving average, but only for the period greater than the shortest moving average window. We will need to use `np.where()` function to compare all the rows after the (short_window)th index row. Hence, we use iloc inside the `np.where()` function. If true (i.e., short MA value is more than long MA value), the initialized value 0.0 in the signal column will be overwitten with 1.0. A “signal” is created! If the condition is false, the original value of 0.0 will be kept and no signal is generated.
 
-We will also be overwriting the 'sma_positions' column with the difference of the current signal values minus the previous signal value through the 'diff()' method. This will result in +1 whenever the short MA crosses above the long MA, -1 whenever the short MA crosses below the long MA and 0 elsewhere.
+We will also be overwriting the `sma_positions` column with the difference of the current signal values minus the previous signal value through the `diff()` method. This will result in +1 whenever the short MA crosses above the long MA, -1 whenever the short MA crosses below the long MA and 0 elsewhere.
 
 Open `step1.py`{{open}}  in the editor.
 
